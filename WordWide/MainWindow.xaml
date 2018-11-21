@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WordWide"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" FontSize="20">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--TODO Binding-->
+        <ListView ItemsSource="{Binding Words}"
+                  SelectedItem="{Binding SelectedWord,Mode=TwoWay}"
+                  DisplayMemberPath="EnglishWord"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Content="EnglishWord" Margin="10 10 10 10"/>
+            <TextBox Grid.Row="1" Text="{Binding SelectedWord.EnglishWord ,
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10 0 10 10"/>
+            <Label Grid.Row="2" Content="TranslateWord" Margin="10 10 10 10"/>
+            <TextBox Grid.Row="3" Text="{Binding SelectedWord.TranslateWord ,
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10 0 10 10"/>
+            <Label Grid.Row="4" Content="Progress" Margin="10 10 10 10"/>
+            <TextBox Grid.Row="5" Text="{Binding SelectedWord.Progress ,
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10 0 10 10"/>
+        </Grid>
     </Grid>
 </Window>
