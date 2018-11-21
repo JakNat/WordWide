@@ -111,12 +111,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WordWide.DataAccess\WordWide.DataAccess.csproj">
-      <Project>{0cdcfb6a-2db0-4734-8e99-0f9c306403ee}</Project>
-      <Name>WordWide.DataAccess</Name>
+    <ProjectReference Include="..\WordWIde.DataAccess\WordWIde.DataAccess.csproj">
+      <Project>{eb2a4567-a8b4-43ce-a5b6-9d2a5438cf84}</Project>
+      <Name>WordWIde.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\WordWide.Model\WordWide.Model.csproj">
-      <Project>{254ab53e-7278-40e2-ac20-2a42dbf9fbdb}</Project>
+      <Project>{1a26f8d2-a28a-432d-b8be-c34df05ad56b}</Project>
       <Name>WordWide.Model</Name>
     </ProjectReference>
   </ItemGroup>
